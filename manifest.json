@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Foxford Chat Autoscroll",
+  "version": "1.0.0",
+  "description": "Adds an autoscroll toggle to the Foxford lesson chat.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://foxford.ru/groups/*",
+        "https://apps.foxford.ru/webinar/*",
+        "https://apps.foxford.ru/webinar-foxford/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
